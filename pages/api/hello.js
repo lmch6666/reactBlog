@@ -10,7 +10,7 @@ const MYTOKEN = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9
 // export a default function for API route to work
 export default async function helloAPI(req, res) {
   // console.log('<<req>>',req,'<<res>>', res);
-  console.log(req.body.slug);
+  // console.log(req.body.slug);
   // 通过创建本地客户端来向远程服务器进行提交数据 ， 需要远程服务端的配置的token 和配置的权限
   const graphQLClient = new GraphQLClient(graphqlAddress,{
     headers:{

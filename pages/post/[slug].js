@@ -30,7 +30,7 @@ import { PostDetail,
   )
 }
 // 在构建过程中获取数据
-export async function getStaticProps({params}){
+export async function getStaticProps({ params }){
   const posts = await getPostDetails(params.slug);
   // console.log("<<通过slug获取到得数据>>", posts);
   return {
