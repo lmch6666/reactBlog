@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import { useRouter } from 'next/router'
 import { getPosts, getPostDetails } from '../../service/index'
 import { PostDetail, 
@@ -10,7 +10,12 @@ import { PostDetail,
         Loader
       } from '../../Components/index'
  const PostDetails = ({ post }) => {
-
+  const [data, setData] = useState('');
+  useEffect(() => {
+    if (data == '') {
+      return;
+    }
+  }, [data])
   const route = useRouter();
 
   if (route.isFallback) {
@@ -23,7 +28,7 @@ import { PostDetail,
          <div className="col-span-1 lg:col-span-8">
             <PostDetail data = {post}/>
             <Author author = {post.author}/>
-            <CommentForm slug ={post.slug} />
+            <CommentForm slug = {post.slug} set={setData} />
             <Comment slug ={post.slug}/>
          </div>
          <div className="col-span-1 lg:col-span-4">

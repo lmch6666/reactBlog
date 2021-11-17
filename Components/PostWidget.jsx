@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Link from 'next/link'
 import moment from 'moment'
+// react 导入图片  以import形式导入进来使用，平常的方法是不行的
 import tu from '../public/xbg.png'
 import { getRecentPosts, getSimilarPosts } from '../service/index'
 const PostWidget = ({categories,slug}) => {

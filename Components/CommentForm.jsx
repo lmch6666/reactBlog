@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { submitData } from '../service/index'
 
-const CommentForm = ({ slug }) => {
+const CommentForm = ({ slug, set }) => {
 
   const [error, setError] = useState(false);
   const [localStorage, setLocalStorage] = useState(null);
@@ -75,7 +75,7 @@ const CommentForm = ({ slug }) => {
           ...formData
         }));
         setShowMessage(true);
-
+        set(formData.comment);
         setTimeout(() => {
           setShowMessage(false);
         }, 1500);
