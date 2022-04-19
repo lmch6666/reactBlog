@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 
 const categories = [
-  {name:'React', slug: 'react'},
-  {name:'Web Component', slug: 'WebComponent'}
+  {name:'其他', slug: 'react'},
+  {name:'MDN', slug: 'WebComponent'}
 ]
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
          <div className='md:float-left block'>
             <Link href='/'>
               <span className='cursor-pointer font-bold text-4xl text-white'>
-                GraphCMS
+                nextBlog
               </span>
             </Link>
          </div>

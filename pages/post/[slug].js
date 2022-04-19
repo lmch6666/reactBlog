@@ -34,7 +34,7 @@ import { PostDetail,
          <div className="col-span-1 lg:col-span-4">
             <div className="relative lg:sticky top-8">
               <PostWidget
-                categories={post.categories.map( (item) => item.slug)}
+                categories={post.categories.map((item) => item.slug)}
                 slug= {post.slug}
               />
               <Categories/>
@@ -54,8 +54,8 @@ export async function getStaticProps({ params }){
     }
   }
 }
-// Specify dynamic routes to pre-render pages based on data.（指定动态路由需要基础数据去预渲染页面）
-// The HTML is generated at build time and will be reused on each request. （在html构建生成的时候，并将在每次请求时重用）
+// 指定动态路由需要基础数据去预渲染页面
+// 在html构建生成的时候，并将在每次请求时重用
 export async function getStaticPaths() {
   const posts = await getPosts();
   return {

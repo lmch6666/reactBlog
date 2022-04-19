@@ -40,7 +40,6 @@ import moment from 'moment';
       default:
         return modifiedText;
     }
-
   }
 
   return (
