@@ -27,8 +27,8 @@ body:before{
   top: 0;
   z-index: -1;
   background-position: 50% 50%;
-  background-repeat: repeat;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .text-shadow{
